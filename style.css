@@ -1,0 +1,239 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+.couverture{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('./assets/fnd-coverpage.png');
+    background-size: cover;
+    color: aliceblue;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    padding: 35px 0;
+    font-size: 22px;
+    font-family: 'Quantico', sans-serif;
+}
+.navbar li{
+    cursor: pointer;
+    transition: all 0.5s ease;
+    border-bottom: inset rgba(0, 0, 255, 0);
+    text-shadow: 0 0 10px transparent;
+}
+.navbar li a{
+    color: white;
+    text-decoration: none;
+}
+.navbar li:hover{
+    border-bottom: inset rgb(255, 255, 255);
+    text-shadow: 0 0 5px rgb(1, 0, 73);
+}
+.principal-text_couv{
+    height: 100%;
+    margin-bottom: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.titre_couverture{
+    font-size: 50px;
+    font-family: 'Exo2', sans-serif;
+    font-weight: 700;
+    display: flex;
+}
+.text-introduction_couverture{
+    text-align: center;
+    font-family: "Exo2", sans-serif;
+    text-shadow: 0 0 15px rgb(255, 255, 255);
+}
+/* concept */
+.concept{
+    height: 65vh;
+    background: linear-gradient(to bottom, #070707, 93%, #181818);
+    position: relative;
+}
+.texte_concept{
+    padding-top: 100px;
+    color: aliceblue;
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Quantico', sans-serif;
+    height: 100%;
+}
+.texte_concept span{
+    font-style: italic;
+    font-weight: 800;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.texte_concept span a{
+    color: gray;
+    transition: all 0.4s ease;
+}
+.texte_concept span a:hover{
+    color: rgb(212, 212, 212);
+}
+.image_concept{
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.7;
+}
+.img1{
+    top: 40px;
+    left: 40px;
+}
+.img2{
+    bottom: 60px;
+    right: 100px;
+}
+/* Missions */
+.mission{
+    height: 100vh;
+    background: linear-gradient(to bottom, #181818b6, #181818b2), url("./assets/Mission/fnd1-mission.jpg");
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    align-items: center;
+    color: whitesmoke;
+    font-family:  'Quantico', sans-serif;
+    position: relative;
+}
+.hero1mission{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+}
+.fusee{
+    width: 80%;
+    height: 600px;
+    object-fit: cover;
+    filter: drop-shadow(0 0 10px rgb(0, 0, 0));
+    justify-content: center;
+}
+
+.barre{
+    width: 2px;
+    height: 500px;
+    border-radius: 1px;
+    background-color: white;
+}
+.hero2{
+    padding: 0 30px;
+}
+.kestion span{
+    font-weight: 700;
+}
+.titre-mission{
+    font-size: 44px;
+}
+.explorer{
+    background-color: transparent;
+    font-family: 'Quantico', sans-serif;
+    width: 120px;
+    border: 1px solid gray;
+    color: aliceblue;
+    border-radius: 20px;
+    height: 40px;
+    font-size: 17px;
+    transition: transform 0.8s ease;
+    transform: scale(1) ;
+}
+.explorer:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.kestion{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.but{
+    width: 80%;
+    height: 350px;
+}
+.investig{
+    width: 80%;
+}
+.explorer a{
+    color: gray;
+    text-decoration: none;
+}
+
+.points{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
+}
+.item{
+    background-color: whitesmoke;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+.active{
+    width: 10px;
+    height: 10px;
+    background-color: rgb(100, 100, 100);
+}
+
+
+
+
+/* Enjeux */
+.enjeux{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    text-align: center;
+    height: 70vh;
+    background-color: #181818;
+    color: aliceblue;
+}
+.hero1{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    font-family: "Exo2", sans-serif;
+}
+.img-enjeux{
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 40%;
+    box-shadow: 0 0 15px gray;
+}
+
+/* Copyright */
+.copright{
+    color: white;
+    text-align: center;
+    font-family: 'Quantico', sans-serif;
+    background-color: #181818;
+    padding: 40px 0;
+    font-size: 20px;
+}
