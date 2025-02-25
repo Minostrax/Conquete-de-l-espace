@@ -23,6 +23,7 @@
     align-items: center;
     background-image: url('assets/fnd-coverpage.png');
     background-size: cover;
+    background-position: center;
     color: aliceblue;
 }
 .navbar{
@@ -71,18 +72,41 @@
 
 /* concept */
 .concept{
-    height: 65vh;
+    height: 75vh;
     background: linear-gradient(to bottom, #070707, 93%, #181818);
-    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 .texte_concept{
-    padding-top: 100px;
     color: aliceblue;
     text-align: center;
     font-size: 22px;
     font-family: 'Quantico', sans-serif;
-    height: 100%;
 }
+.planet_img_concept{
+    height: 70%;
+    object-fit: cover;
+    animation: tournage 8s infinite alternate;
+    filter: drop-shadow(0 0 10px gray);
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+@keyframes tournage {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(1);
+    }
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
+.planet_img_concept:hover {
+    transform: scale(1.05) rotate(0deg);
+    filter: drop-shadow(0 0 10px rgb(74, 0, 74)) ;
+}
+
 .texte_concept span{
     font-style: italic;
     font-weight: 800;
@@ -96,21 +120,6 @@
 }
 .texte_concept span a:hover{
     color: rgb(212, 212, 212);
-}
-.image_concept{
-    width: 200px;
-    height: 150px;
-    position: absolute;
-    border-radius: 50%;
-    opacity: 0.7;
-}
-.img1{
-    top: 40px;
-    left: 40px;
-}
-.img2{
-    bottom: 60px;
-    right: 100px;
 }
 /* Missions */
 .mission{
@@ -248,4 +257,102 @@
     background-color: #181818;
     padding: 40px 0;
     font-size: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width:1600px){
+    .planet_img_concept{
+        height: 60%;
+    }
+    .texte_concept{
+        font-size: 20px;
+    }
+    .enjeux{
+        flex-wrap: wrap;
+        gap: 50px;
+        min-height: 80vh;
+    }
+}
+@media (max-width: 1300px) {
+    .planet_img_concept{
+        height: 50%;
+    }
+    .but,
+    .investig{
+        width: 95%;
+        font-size: 15px;
+    }
+    .enjeux{
+        padding: 25px 0;
+    }
+    .texte_concept{
+        font-size: 18px;
+    }
+}
+@media (max-width: 1150px) {
+    .planet_img_concept{
+        height: 40%;
+    }
+    .concept{
+        height: 70vh;
+    }
+    .hero2{
+        padding: 0 15px;
+    }
+    .fusee{
+        height: 500px;
+    }
+    .kestion{
+        gap: 5px;
+    }
+}
+@media (max-width:1000px) {
+    .enjeux{
+        height: auto;
+    }
+    .concept{
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+    }
+    .mission{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        height: 105vh;
+    }
+    .hero1mission{
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-around;
+    }
+    .barre{
+        height: 2px;
+        width: 90%;
+    }
+    .fusee{
+        height: 80%;
+        width: auto;
+    }
+    .but{
+        height: auto;
+    }
+}
+@media (max-width: 700px) {
+    .navbar{
+        gap: 50px;
+    }
+    .texte_concept{
+        font-size: 16px;
+    }
+    .kestion{
+        font-size: 16px;
+    }
+    .titre-mission{
+        font-size: 36px;
+    }
+    .explorer{
+        font-size: 15px;
+        width: 105px;
+        height: 35px;
+    }
 }

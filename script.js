@@ -55,3 +55,34 @@ button2.addEventListener("click", () => {
         let image = document.querySelector(".fusee").src = image_spoutnik
     }
 })
+
+// defilement menu variables
+const btn_accueil = document.getElementById("accueil")
+const btn_concept = document.getElementById("concept")
+const btn_mission = document.getElementById("mission")
+const btn_enjeux = document.getElementById("enjeux")
+
+function DefilementLiens(elementId) {
+    document.getElementById(elementId).scrollIntoView({
+        behavior: 'smooth'
+    });
+}
+
+btn_accueil.addEventListener("click", () => {
+    DefilementLiens("section1");
+})
+
+btn_concept.addEventListener("click", () => {
+    DefilementLiens("section2");
+})
+
+btn_mission.addEventListener("click", () => {
+    DefilementLiens("section3");
+})
+
+btn_enjeux.addEventListener("click", () => {
+    DefilementLiens("section4");
+})
+
+
+
