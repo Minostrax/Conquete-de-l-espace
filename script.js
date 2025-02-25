@@ -84,5 +84,31 @@ btn_enjeux.addEventListener("click", () => {
     DefilementLiens("section4");
 })
 
+// hamburger bar mobile version
+const hamburger = document.querySelector(".barre_hamburger")
+let bar_hamburger = document.querySelectorAll('.bar')
+let navbar_animaton = document.querySelector(".navbar")
 
+hamburger.addEventListener("click", () => {
+    bar_hamburger.forEach((element) => {
+        element.classList.toggle("bar_active");
+    })
+    Verification_hamburger()
+})
+
+function Verification_hamburger() {
+    let active = false;
+
+    bar_hamburger.forEach((element) => {
+        if (element.classList.contains("bar_active")) {
+            active = true;
+        }
+    });
+
+    if (active == true) {
+        navbar_animaton.style.transform = "translateX(0%)";
+    } else {
+        navbar_animaton.style.transform = "translateX(100%)";
+    }
+}
 
