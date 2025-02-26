@@ -346,8 +346,8 @@
     }
     .mission{
         grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        height: 105vh;
+        grid-template-rows: 1fr 1.1fr;
+        height: auto;
     }
     .hero1mission{
         flex-direction: column;
@@ -364,6 +364,9 @@
     }
     .but{
         height: auto;
+    }
+    .but, .investig{
+        width: 100%;
     }
 }
 @media (max-width: 700px) {
@@ -420,5 +423,57 @@
         height: 100%;
         right: 0;
         transform: translateX(100%);
+    }
+}
+@media (max-width: 500px) {
+    .titre_couverture{
+        font-size: 40px;
+    }
+    .text-introduction_couverture{
+        font-size: 15px;
+    }
+    .texte_concept{
+        font-size: 11px;
+    }
+    .titre-mission{
+        font-size: 28px;
+    }
+    .but, .investig, .date{
+        font-size: 12px;
+    }
+    .img-enjeux{
+        width: 220px;
+        height: 200px;
+    }
+    .titre-enjeux{
+        font-size: 18px;
+    }
+    .para-enjeux{
+        font-size: 15px;
+    }
+    .fusee{
+        width: 95%;
+    }
+}
+@media (max-width: 400px) {
+    .titre_couverture{
+        font-size: 32px;
+    }
+    .text-introduction_couverture{
+        font-size: 13px;
+    }
+    .texte_concept{
+        font-size: 10px;
+    }
+    .explorer{
+        font-size: 12px;
+        width: 80px;
+        height: 30px;
+    }
+    .titre-mission{
+        font-size: 24px;
+    }
+    .but, .investig, .date{
+        font-size: 11px;
     }
 }
